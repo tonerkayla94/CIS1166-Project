@@ -21,7 +21,11 @@ def DetermineAmount(binaryCode):
     amntErrors = C-1
     amntCorrections = int((C-1)/2)
 
-    return("the max amount of errors is "+ str(amntErrors) +" and the max amount of corrections is "+ str(amntCorrections))
+    return(amntErrors,amntCorrections)
+
+def DetectAndCorrect(binaryCode):
+    amntErrors,amntCorrections = DetermineAmount(binaryCode)
+
 
 
 if __name__ == '__main__':
