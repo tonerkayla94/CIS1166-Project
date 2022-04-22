@@ -1,7 +1,6 @@
 def DetermineAmount(binaryCode):
     binaryStrings = binaryCode.split(",")
     originString = binaryStrings[0]
-    print(binaryStrings)
     for string in binaryStrings:
         if(len(string) != len(originString)):
             return "all strings in binary code must be the same length"
@@ -21,11 +20,7 @@ def DetermineAmount(binaryCode):
     amntErrors = C-1
     amntCorrections = int((C-1)/2)
 
-    return(amntErrors,amntCorrections)
-
-def DetectAndCorrect(binaryCode):
-    amntErrors,amntCorrections = DetermineAmount(binaryCode)
-
+    return("the max amount of errors detected is "+ str(amntErrors) +" and the max amount of corrections is "+ str(amntCorrections))
 
 
 if __name__ == '__main__':
